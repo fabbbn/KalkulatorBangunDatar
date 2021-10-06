@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KalkulatorBangunRuang</string>
+    <string name="segitiga_title">Kalkulator Segitiga</string>
+    <string name="panjang_alas">Panjang Alas Segitiga</string>
+    <string name="tinggi">Tinggi Segitiga</string>
+    <string name="hasil_title">Hasil Perhitungan Segitiga</string>
+    <string name="btn_hitung">Hitung</string>
+    <string name="hasil_output">Hasil perhitungan akan ditampilkan disini</string>
+</resources>
