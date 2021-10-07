@@ -4,84 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="25dp"
+    android:scrollbars="horizontal|vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-33dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/labelTitle"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/segitiga_title"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/labelInputPanjang"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/panjang_alas"
-            android:textSize="16sp" />
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbarAlwaysDrawVerticalTrack="false">
 
-        <EditText
-            android:id="@+id/inputAlas"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/labelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/segitiga_title"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/labelInputTinggi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/tinggi"
-            android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/figure_area_of_triangle_formula_500_200" />
 
-        <EditText
-            android:id="@+id/inputTinggi"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/labelInputPanjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/panjang_alas"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/labelOutput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="25dp"
-            android:text="@string/hasil_title"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <EditText
+                android:id="@+id/inputAlas"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:id="@+id/textViewOutput"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="@string/hasil_output"
-            android:textAlignment="center"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/labelInputTinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tinggi"
+                android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/buttonHitung"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="buttonClick"
-            android:text="@string/btn_hitung"
-            android:textAlignment="center" />
+            <EditText
+                android:id="@+id/inputTinggi"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/labelOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="@string/hasil_title"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewOutput"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/hasil_output"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonHitung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="buttonClick"
+                    android:text="@string/btn_hitung"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btnKembali"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonClick"
+                    android:text="@string/btn_kembali" />
+
+                <Space
+                    android:layout_width="79dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

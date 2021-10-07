@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
 
     fun buttonClick(view: View) {
         when(view.id) {
+            R.id.btnKembali->{
+                finish()
+            }
             R.id.buttonHitung -> {
                 val alas = panjangAlas.text.toString().toFloat()
                 val tinggi = tinggi.text.toString().toFloat()
